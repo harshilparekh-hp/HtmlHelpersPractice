@@ -1,0 +1,62 @@
+﻿@model List<HtmlHelpersPractice.Models.Employee>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <center>
+        <h2> List of Employees</h2>
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        Employee First Name
+                    </td>
+                    <td>
+                        Employee Last Name
+                    </td>
+                    <td>
+                        Gender
+                    </td>
+                    <td>
+                        Country
+                    </td>
+                    <td>
+                        Terms and Conditions
+                    </td>
+                </tr>
+
+                @foreach (var emp in Model)
+                {
+                    <tr>
+                        <td>
+                            @emp.EmployeeFirstName
+                        </td>
+                        <td>
+                            @emp.EmployeeLastName
+                        </td>
+                        <td>
+                            @emp.Gender
+                        </td>
+                        <td>
+                            @emp.Country
+                        </td>
+                        <td>
+                            @emp.EmployeeTermsAndConditions
+                        </td>
+                    </tr>
+                }
+
+
+            </table>
+        </div>
+    </center>
+</body>
+</html>
